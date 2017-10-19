@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .cj{
+            width:200px;
+            height:200px;
+            padding:200px;
+            border:1px solid red;
+            margin:0 auto;
+            perspective: 800px;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            /*transition:transform 2s ease;*/
+            position:relative;
+            transform-style:preserve-3d;
+            transform-origin:center center 100px;
+        }
+        /*.box:hover{
+            transform:rotateX(180deg);
+        }*/
+        .box div{
+            width:200px;
+            height:200px;
+            text-align:center;
+            line-height:200px;
+            font-size:30px;
+            position:absolute;
+            left:0;
+            top:0;
+
+
+        }
+        .box div:nth-child(1){
+            background:red;
+            transform:rotateX(90deg);
+            transform-origin:top;
+        }
+
+        .box div:nth-child(2){
+            background:purple;
+            transform:rotateY(-90deg);
+            transform-origin:left;
+        }
+
+        .box div:nth-child(3){
+            background:yellow;
+            transform:rotateX(180deg);
+
+        }
+        .box div:nth-child(4){
+            background:green;
+            transform:rotateY(90deg);
+            transform-origin:right;
+        }
+        .box div:nth-child(5){
+            background:blue;
+            transform:rotateX(-90deg);
+            transform-origin:bottom;
+        }
+        .box div:nth-child(6){
+            background:orange;
+            transform:translateZ(200px);
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+            var cx=$(".box").offset().left+$(".box").width()/2;
+            var cy=$(".box").offset().top+$(".box").height()/2;
+            $(document).mousemove(function(e){
+                var px= e.pageX-cx;
+                var py= e.pageY-cy;
+                var pz=0;
+                var m=Math.sqrt(px*px+py*py+pz*pz);
+                var mx=px/m;
+                var my=py/m;
+                var mz=pz/m;
+                $(".box").css({
+                    transform:"rotate3d("+mx+","+my+","+mz+","+m+"deg)"
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="cj">
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+</body>
+</html>

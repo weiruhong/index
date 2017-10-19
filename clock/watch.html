@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body{
+            height:100%;
+            overflow: hidden;
+        }
+        .box{
+            width:800px;
+            height:800px;
+            margin: 0 auto;
+            position: relative;
+            background: url(clock.jpg) no-repeat center;
+        }
+        .clock{
+            width:300px;
+            height:300px;
+            border:10px solid #c6fdf1;
+            border-radius: 50%;
+            position:absolute;
+            left:0;right:0;top:0;bottom:0;
+            margin:80px 251px;
+            box-shadow: 2px 2px #aaa inset;
+           /*  background:radial-gradient(#fff,#ccc); */
+           /* background: url(a.jpg)no-repeat center; */
+           background-size: auto 200px;
+        }
+        .circle{
+            width:10px;
+            height:10px;
+            background:red;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right:0;
+            left:0;
+            bottom:0;
+            margin:145px 145px;
+            z-index:4;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var clock=document.getElementsByClassName("clock")[0];
+            crateMark();
+            var time=new Date();
+            var h=time.getHours();
+            var m=time.getMinutes();
+            var s=time.getSeconds();
+            var hp=createPinter(60,6,"#000",30*h-90+(6*m)/12);
+            var mp=createPinter(80,4,"green",6*m-90);
+            var sp=createPinter(100,2,"red",6*s-90);
+            setInterval(function(){
+                var time=new Date();
+                var h=time.getHours();
+                var m=time.getMinutes();
+                var s=time.getSeconds();
+                hp.style.transform="translate(150px,"+hp.t+"px) rotate("+(30*h-90+(6*m)/12)+"deg)";
+                mp.style.transform="translate(150px,"+mp.t+"px) rotate("+(6*m-90)+"deg)";
+                sp.style.transform="translate(150px,"+sp.t+"px) rotate("+(6*s-90)+"deg)";
+            },1000)
+
+            function crateMark(){
+                for(var i=0;i<60;i++){
+                    var w, h,l;
+                    if(i%5==0){
+                        w=4;
+                        h=10;
+                    }else{
+                        w=2;
+                        h=6;
+                    }
+                    l=(300-w)/2;
+                    var div=document.createElement('div');
+                    div.style.cssText="width:"+w+"px;height:"+h+"px;background:#000;position:absolute;left:0;top:0;";
+                    div.style.transform="translate("+l+"px,0) rotate("+6*i+"deg)";
+                    div.style.transformOrigin="center 150px";
+                    clock.appendChild(div);
+                }
+            }
+            function createPinter(w,h,c,a){
+                var div=document.createElement('div');
+                var t=(300-h)/2;
+                div.t=t;
+                div.style.cssText="width:"+w+"px;height:"+h+"px;background:"+c+";position:absolute;left:0;top:0;transform:translate(150px,"+t+"px) rotate("+a+"deg);transform-origin:left center;";
+                clock.appendChild(div);
+                return div;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="clock">
+            <div class="circle"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

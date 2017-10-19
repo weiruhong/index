@@ -1,0 +1,392 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. 设置默认字体 sans-serif.
+ * 2. 防止后方向改变iOS文本大小调整，不禁用用户缩放
+ *    
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/**
+ * 移除body默认margin值.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5新模块元素
+   ========================================================================== */
+
+/**
+ * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. 下列HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式，考虑到其特殊性，特为下列元素添加“inline-block”显示属性。
+ * 2. 修正进度条在 Chrome, Firefox,  Opera对齐方式.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * 为防止在主流浏览器中出现“不带控制按钮的音频模块”这一问题。
+ * 解决iOS5移动端显示多余高度的兼容性问题。
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * 处理 不存在于 IE 8/9 的样式。
+ */
+
+[hidden],
+template {
+  display: none; 
+}
+
+/* 链接样式
+   ========================================================================== */
+
+/**
+ * 去除IE10中活动链接的灰色背景.
+ */
+
+a {
+  background-color: transparent;
+  text-decoration: none;/*去除a链接下划线*/
+}
+
+/**
+ * 去除所有浏览器a链接点击、鼠标移入外边框.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* 排版相关样式
+   ========================================================================== */
+
+/**
+ * 解决首字母样式在IE8/9、Safari 5和chrome浏览器中未定义的问题 
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * 添加加粗样式，应用于Firefox 4+、Safari 5和Chrome
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ *添加斜体样式，应用于Safari 5和chrome
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * 使h1标签在section标签和article标签的留白和字体样式统一。
+ * 可同时兼容Firefox 4+、Safari 5和Chrome等不同的浏览器。
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * 解决其在IE8/9中样式未定义的问题
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * 统一所有浏览器中字体大小不一致的兼容性问题。
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ *  在所有浏览器中，防止“sub”和“sup”标签影响“line-height”属性。
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 内嵌文本相关样式
+   ========================================================================== */
+
+/**
+ * 在IE 8/9/10移除a链接包裹图片后的蓝色边框.
+ */
+
+img {
+  border: 0;
+}
+
+
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * "figure"标签规定独立的流内容（图像、图表、照片、代码等等）
+ */
+
+figure {
+  margin:0px;
+}
+
+/**
+ * 解决其在Firefox中的兼容性问题
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * 提高pre标签格式化文本在所有浏览器中的可读性
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * 更正关联字体在Safari 5和Chrome中的老式设置.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+
+/**
+ * 1. 更改字体颜色在IE8/9浏览器中没有被继承的问题
+ * 2. 更改关联字体属性在IE8/9浏览器中没有被继承的问题
+ * 3. 调整边距设置在Firefox 4+, Safari 5, 和 Chrome浏览器中的兼容性问题
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * 修正IE 8/9/10/11 button元素设置 hidden
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * 调整“button”和“select”的“text-transform”继承不一致性的问题
+ * 其他表单控件元素不继承“text-transform”属性
+ * 修正“button”标签在Chrome, Safari 5+, and IE 8+中的样式继承问题
+ * 修正“select”标签在Firefox 4+ 和Opera中的样式继承问题
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. 避免webKit bug发生在Android 4.0.* 设备上，破坏原生“audio”和“video”控制组件
+ * 2. 改正iOS设备中“input”类型表单样式不可用的问题
+ * 3. 增强光标样式在input表单和其他表单的可用性和一致性
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * 为禁用表单重设定默认光标样式
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Firefox 4+浏览器中，去除容器内边距和边框属性
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 调整Firefox 4+浏览器下，客户端样式表中设置了“!important”的“line-height”属性的input表单
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ *
+ * 1. 调整IE 8/9/10 中尺寸属性设置为“内容框”的盒子模型
+ * 2. 去除IE 8/9/10 中的多余的外边距留白部分
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. 兼容Safari 5 and Chrome上 “searchfield” 上设置 “appearance”属性
+ * 2. 兼容Safari 5 and Chrome上 “border-box” 上设置 “box-sizing”属性
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * 去除OS X系统上Safari 5和Chrome中容器内边距和搜索取消按钮属性
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+
+/**
+ * IE 8/9/10/11中，去除默认垂直滚动条属性
+ */
+
+textarea {
+  overflow: auto;
+}
+
+
+/**
+ * 定义一致的边框、内边距和外边距 
+ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+
+/* 表格
+   ========================================================================== */
+
+/**
+ * 删除表格单元格之间的间距。
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}

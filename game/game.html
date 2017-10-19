@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/game.css">
+	<script src="js/jquery.js"></script>
+	<script src="./js/game.js"></script>
+	<script>
+		window.onload=function(){
+			var games=new game;
+			var start=$(".start")[0];
+			start.onclick=function(){
+				games.play();
+				start.style.display="none";
+			}
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<div class="panel">
+		<div class="start"><img src="img/111.jpg" alt=""></div>
+		<div class="die">
+			<span>生命:</span><span>10</span>
+		</div>
+		<div class="sore">
+			<span>分数:</span><span>0</span>
+		</div>
+		
+		<select name="" id="">
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+		</select>
+	</div>
+</body>
+</html>

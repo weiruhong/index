@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/huaban.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/huaban.js"></script>
+    <script src="js/shape.js"></script>
+</head>
+<body>
+    <div class="container">
+        <ul class="menu">
+            <li class="parent">
+                <div>文件</div>
+                <ul class="son file">
+                    <li>新建</li>
+                    <li>保存</li>
+                    <li>返回</li>
+                </ul>
+            </li>
+            <li class="parent">
+                <div>线条填充</div>
+                <ul class="son borderColor">
+                    <input type="color">
+                </ul>
+            </li>
+            <li class="parent">
+                <div>填充</div>
+                <ul class="son bgColor">
+                    <input type="color">
+                </ul>
+            </li>
+            <li class="parent">
+                <div>选择</div>
+                    <ul class="son select">
+                        <li style="margin:3px 70px;">选择</li>
+                    </ul>
+            </li>
+        </ul>
+        <div class="box">
+            <ul class="tool">
+                <span class="gj">工具栏</span>
+                <li>
+                    <ul class="tools shapes">
+                        <div >图形</div>
+                        <li data-role="line">线</li>
+                        <li data-role="rect">矩形</li>
+                        <li data-role="circle">圆</li>
+                        <li data-role="pen">铅笔</li>
+                        <li data-role="five">五角星</li>
+                    </ul>
+                </li>
+                <li>
+                    <div>类型</div>
+                    <ul class="tools type">
+                        <li data-role="stroke">线条</li>
+                        <li data-role="fill">填充</li>
+                    </ul>
+                </li>
+                <li>
+                    <div>线条</div>
+                    <ul class="tools border">
+                        <li style="float: left;" data-role="1">细</li>
+                        <li style="float: left;margin-left:15px;" data-role="5">中</li>
+                        <li style="float: left;margin-left:20px;" data-role="10">粗</li>
+                    </ul>
+                </li>
+                <li>
+                    <div style="margin-top:20px;">橡皮</div>
+                    <ul class="tools xpSize">
+                        <li style="float: left;" data-role="10">小</li>
+                        <li style="float: left;margin-left:15px;" data-role="20">中</li>
+                        <li style="float: left;margin-left:20px;" data-role="30">大</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="copy">
+                <canvas></canvas>
+                <div class="xp"></div>
+                <div class="selectArea"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

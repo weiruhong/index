@@ -1,0 +1,118 @@
+body,ul,li,p{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.container{
+    width:800px;
+    height:auto;
+    border:1px solid #ccc;
+    margin:0 auto;
+    position:relative;
+}
+.menu{
+    width:100%;
+    height:30px;
+    background:#aaa;
+}
+.parent{
+    width:25%;
+    height:100%;
+    float: left;
+}
+.parent div{
+    width:100%;
+    height:100%;
+    font-size:18px;
+    line-height:30px;
+    background: url(../1.png) no-repeat center;
+    text-align:center;
+}
+/*.nav{
+    width:100%;
+    height:30px;
+    bakcground:#ccc;
+}*/
+.son{
+    background:#ccc;
+    height:30px;
+}
+.son li{
+    width:33.3333%;
+    height:100%;
+    float: left;
+    line-height:30px;
+    text-align:center;
+}
+.son input{
+    margin:3px 80px;
+}
+.tool{
+    width:100px;
+    height:420px;
+    border:1px solid red;
+    cursor:pointer;
+    position:absolute;
+    z-index:2;
+}
+.tool div{
+    width:100%;
+    height:100%;
+    margin-top:10px;
+    line-height:40px;
+    text-align:center;
+}
+.tool span{
+    display:block;
+    height:30px;
+    line-height:30px;
+    text-align: center;
+}
+.tools li{
+    margin-top:3px;
+    margin-left:10px;
+    transition:background 2s linear;
+}
+.tools li:hover{
+    background:#000;
+    color:#fff;
+}
+.box{
+    width:100%;
+    height:500px;
+    border:1px solid #ccc;
+    margin-top:30px;
+    position:relative;
+}
+.copy{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0px;
+}
+canvas{
+    position:absolute;
+    left:0;
+    top:0px;
+    background-size: cover;
+}
+.xp{
+    width:10px;
+    height:10px;
+    border:1px solid red;
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:50%;
+    display:none;
+}
+.selectArea{
+    width:100px;
+    height:100px;
+    border:1px dotted #000;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+}
